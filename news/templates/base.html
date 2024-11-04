@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        gap: 24px;
+    }
+    .container div {
+        background: rgb(214, 214, 214);
+        padding: 6px 12px;
+        border-radius: 8px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .headline {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+    .content {
+        font-size: 16px;
+    }
+    .date {
+        font-style: italic;
+        margin-bottom: 8px;
+    }
+    .author {
+        font-style: italic;
+        font-weight: bold;
+        margin: 0;
+    }
+</style>
+<body>
+    <h1>Articles</h1>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
